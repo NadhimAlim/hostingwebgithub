@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  /* min-height: 1000vh; */
+  background-color: rgb(6, 124, 160);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  transition: background-color 0.5s;
+}
+
+nav .juduldestinasi {
+  font-size: 2rem;
+  color: white;
+}
+
+nav .menunav a {
+  margin: 0 10px;
+  color: white;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+nav .menunav a:hover {
+  color: rgb(8, 19, 170);
+}
+
+nav .navextra a {
+  margin: 0 0.5rem;
+  color: white;
+}
+
+nav .navextra a:hover {
+  color: rgb(8, 19, 170);
+}
+
+.hero {
+  color: #333;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px 1px solid rgb(6, 124, 160);
+  padding: 1.4rem 7%;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero main {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hero main .btn {
+  color: white;
+  background-color: rgb(3, 116, 150);
+  padding: 10px 20px;
+  border-radius: 10%;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 25px;
+  border: 2px solid rgb(3, 116, 150);
+}
+
+.hero main .btn:hover {
+  background-color: white;
+  color: black;
+}
+
+#hammenu {
+  display: none;
+}
+
+.teamkamu {
+  text-align: center;
+  margin-top: 4rem;
+  color: white;
+}
+.pwebsite {
+  padding: 4rem 7% 1.4rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardwebsite {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardwebsite .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.cardwebsite .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.cardwebsite .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardwebsite .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  text-align: center;
+  background-color: rgb(3, 78, 107);
+}
+
+.cardwebsite .back {
+  transform: perspective(600px) rotateY(180deg);
+  background-color: rgb(5, 39, 83);
+  padding: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cardwebsite .back .linkcard {
+  border-top: solid 1px white;
+  border: 50px;
+  line-height: 50px;
+}
+
+.cardwebsite .back h3 {
+  font-size: 20px;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+.cardwebsite .back .linkcard a {
+  color: white;
+}
+
+.cardwebsite:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.cardwebsite:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+footer {
+  background-color: rgb(2, 39, 41);
+  width: 100%;
+  padding: 5px 0px 5px;
+}
+
+.containerfooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.boxfooter {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.boxfooter .logo h1 {
+  color: white;
+}
+
+.boxfooter .terms {
+  max-width: 350px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: white;
+  font-size: 18px;
+}
+
+.boxfooter h2 {
+  margin-bottom: 30px;
+  color: white;
+  font-weight: 700;
+}
+
+.boxfooter a {
+  margin-top: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.boxfooter a:hover {
+  opacity: 0.8;
+}
+
+.boxfooter a .fab {
+  font-size: 20px;
+}
+
+.boxcopyright {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.boxcopyright p {
+  margin-top: 20px;
+  color: white;
+}
+
+.boxcopyright hr {
+  border: none;
+  height: 1px;
+  background-color: white;
+}
+
+/* media query   */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* hp / tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hammenu {
+    display: inline-block;
+  }
+
+  nav .menunav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgb(2, 80, 126);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  nav .menunav.active {
+    right: 0;
+  }
+
+  nav .menunav a {
+    display: block;
+    font-size: 2rem;
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
+  footer {
+    position: static;
+  }
+  .footerdis {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 7%;
+  }
+
+  .footerdis .footerleft,
+  .footerdis .footercenter,
+  .footerdis .footer-right {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footerdis .footercenter {
+    align-items: center;
+  }
+
+  .footerdis .footercenter .mapsicon {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerdis .footercenter i {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .footerdis .footermedsos {
+    margin-top: 20px;
+  }
+
+  .footerdis .footermedsos a {
+    margin-right: 10px;
+  }
+
+  .footerdis .companydestinasi {
+    font-size: 12px;
+  }
+
+  .footerdis h3 {
+    margin-bottom: 15px;
+  }
+}
+
+/* hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+#searchInput {
+  padding: 4px 8px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  margin-right: 10px;
+}
